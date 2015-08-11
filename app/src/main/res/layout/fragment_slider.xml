@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/web"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:id="@+id/tableRow1"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/back"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_action_cloud" />
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_action_cloud" />
+
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/forward"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_action_cloud" />
+
+    </LinearLayout>
+</RelativeLayout>

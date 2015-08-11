@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <!--Put form controls here-->
+
+    <EditText
+        android:id="@+id/feedback"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="comment"
+        android:inputType="textMultiLine"
+        android:lines="5">
+    </EditText>
+        <EditText
+            android:id="@+id/inputname"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:hint="Name"
+            android:layout_below="@id/feedback"
+            android:inputType="textPersonName">
+        </EditText>
+        <EditText
+            android:id="@+id/inputemail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/inputname"
+            android:layout_marginTop="20dp"
+            android:hint="\@mail"
+            android:inputType="textEmailAddress">
+        </EditText>
+    <EditText
+        android:id="@+id/inputphone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:hint="phone:"
+        android:layout_below="@id/inputemail">
+    </EditText>
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/sendbtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:background="#e5000a"
+        android:text="SEND"
+        android:textSize="10sp"
+        android:layout_below="@+id/inputphone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
+    </RelativeLayout>
