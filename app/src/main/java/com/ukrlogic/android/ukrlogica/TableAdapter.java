@@ -89,11 +89,7 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        if(holder.Holderid ==1) {                              // as the list view is going to be called after the header view so we decrement the
-            // position by 1 and pass it to the holder while setting the text and image
-            holder.textView.setText(mNavTitles[position]); // Setting the Text with the array of our Titles
-        }
-        Log.d(TAG, "10 fragtag");
+            holder.textView.setText(mNavTitles[position]);
     }
 
 
@@ -108,7 +104,6 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.ViewHolder> 
     @Override
     public int getItemViewType(int position) {
 
-        Log.d(TAG, "12 fragtag");
         return TYPE_ITEM;
 
     }

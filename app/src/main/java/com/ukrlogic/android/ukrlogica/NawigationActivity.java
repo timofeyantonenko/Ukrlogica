@@ -29,7 +29,8 @@ public class NawigationActivity extends ActionBarActivity implements View.OnClic
     private DrawerLayout mDrawerLayout;
     private Toolbar toolbar;   // Declaring the Toolbar Object
     private ActionBarDrawerToggle mDrawerToggle;
-    String TITLES[] = {"Presentation","Brief","Works","Brandbook"};
+    String TITLES[];
+
     private ListView mDrawerList;
 
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
@@ -64,7 +65,7 @@ public class NawigationActivity extends ActionBarActivity implements View.OnClic
 
         mainHome = (ImageButton)toolbar.findViewById(R.id.main_home);
         mainHome.setOnClickListener(this);
-
+        TITLES = getResources().getStringArray(R.array.menu);
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
         mRecyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
@@ -115,7 +116,11 @@ public class NawigationActivity extends ActionBarActivity implements View.OnClic
 
         mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
 
+
+        TITLES = getResources().getStringArray(R.array.menu);
         mAdapter = new MyAdapter(TITLES);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+
+
         // And passing the titles,icons,header view name, header view email,
         // and header view profile picture
         mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView

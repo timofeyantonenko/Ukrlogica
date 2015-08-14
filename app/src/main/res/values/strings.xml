@@ -20,4 +20,46 @@
         <item>Design</item>
         <item>Marketing</item>
     </string-array>
+
+    <string-array name="menu">
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+    </string-array>
+
+    <string-array name="tableMobile">
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+    </string-array>
+
+    <string-array name="tableDesign">
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+    </string-array>
+
+    <string-array name="tableMarketing">
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+        <item>Presentation</item>
+        <item>Brief</item>
+        <item>Works</item>
+        <item>Brandbook</item>
+    </string-array>
+
+
 </resources>

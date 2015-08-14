@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="10dp"
-        android:background="@android:color/darker_gray">
+        android:background="@android:color/darker_gray"
+        android:id="@+id/relativeLayout">
         <ImageButton
             android:id="@+id/imageBtn"
             android:layout_width="wrap_content"
@@ -24,6 +25,48 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
+    <!--com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_action_cloud"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" /-->
+
+    <com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton
+        android:id="@+id/buttonPresent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_action_cloud"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/relativeLayout" />
+    <com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton
+        android:id="@+id/buttonBrief"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_action_cloud"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonPresent" />
+
+    <com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton
+        android:id="@+id/buttonWorks"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_action_cloud"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonBrief" />
+    <com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton
+        android:id="@+id/buttonBrand"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_action_cloud"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonWorks" />
 
 
 </RelativeLayout>

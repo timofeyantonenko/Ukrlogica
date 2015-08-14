@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
+import com.ukrlogic.android.ukrlogica.MaterialButton.CircularButton;
 import com.ukrlogic.android.ukrlogica.MaterialButton.FloatingActionButton;
 
 /**
@@ -17,8 +20,10 @@ import com.ukrlogic.android.ukrlogica.MaterialButton.FloatingActionButton;
 public class MainActivity extends Activity {
 
     // Material design buttons
-    FloatingActionButton fabButtonAdd, fabButtonPresentation, fabButtonBrif, fabButtonWorks, fabButtonBrandBook;
+    FloatingActionButton fabButtonAdd;
+    CircularButton fabButtonPresentation, fabButtonBrif, fabButtonWorks,fabButtonBrandBook;
     Canvas canvas;
+    Animation presentAnim, briefAnim, worksAnim, brandAnim;
 
 
     @Override
@@ -42,35 +47,21 @@ public class MainActivity extends Activity {
                 .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
                 .withMargins(0, 0, 16, 16)
                 .create();
-        fabButtonPresentation = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_good))
-                .withButtonColor(Color.GRAY)
-                .withGravity(Gravity.CENTER_HORIZONTAL)
-                .withButtonSize(128)
-                .withMargins(0, 64, 0, 0)
-                .create();
-        fabButtonBrif = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_good))
-                .withButtonColor(Color.GRAY)
-                .withGravity(Gravity.CENTER_HORIZONTAL)
-                .withButtonSize(128)
-                .withMargins(0, 172, 0, 0)
-                .create();
-        fabButtonWorks = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_good))
-                .withButtonColor(Color.GRAY)
-                .withGravity(Gravity.CENTER_HORIZONTAL)
-                .withButtonSize(128)
-                .withMargins(0, 280, 0, 0)
-                .create();
-        fabButtonBrandBook = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_good))
-                .withButtonColor(Color.GRAY)
-                .withGravity(Gravity.CENTER_HORIZONTAL)
-                .withButtonSize(128)
-                .withMargins(0, 388, 0, 0)
-                .create();
 
+        fabButtonPresentation = (CircularButton)findViewById(R.id.buttonPresent);
+        fabButtonBrif = (CircularButton)findViewById(R.id.buttonBrief);
+        fabButtonWorks = (CircularButton)findViewById(R.id.buttonWorks);
+        fabButtonBrandBook = (CircularButton)findViewById(R.id.buttonBrand);
+        presentAnim = AnimationUtils.loadAnimation(this, R.anim.presentation_button_down);
+        briefAnim = AnimationUtils.loadAnimation(this, R.anim.brief_down);
+        worksAnim = AnimationUtils.loadAnimation(this, R.anim.works_down);
+        brandAnim = AnimationUtils.loadAnimation(this, R.anim.brand_down);
+
+
+        fabButtonBrif.startAnimation(briefAnim);
+        fabButtonWorks.startAnimation(worksAnim);
+        fabButtonBrandBook.startAnimation(brandAnim);
+        fabButtonPresentation.startAnimation(presentAnim);
         fabButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
